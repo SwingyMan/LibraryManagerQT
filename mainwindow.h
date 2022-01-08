@@ -2,7 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include <QFileDialog>
+#include <QListView>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -13,18 +14,18 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    QString a;
 private slots:
     void on_pushButton_5_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_8_clicked();
 
 private:
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
-struct Book
-{
-    std::string name;
-    int id;
-    std::string isbn;
-    std::string author;
-    int year_of_production;
-};
+

@@ -14,10 +14,17 @@ class Dialog : public QDialog
 public:
     explicit Dialog(QWidget *parent = nullptr);
     ~Dialog();
-    QString getImie()
-    {
-        return imie
-    }
+
+private slots:
+    void on_lineEdit_editingFinished();
+
+    void on_lineEdit_2_editingFinished();
+
+    void on_lineEdit_3_editingFinished();
+
+    void on_lineEdit_4_editingFinished();
+
+    void on_lineEdit_5_editingFinished();
 
 private:
     Ui::Dialog *ui;
