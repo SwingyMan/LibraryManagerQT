@@ -2,7 +2,7 @@
 #define DIALOG_H
 
 #include <QDialog>
-
+#include <QLineEdit>
 namespace Ui {
 class Dialog;
 }
@@ -14,17 +14,15 @@ class Dialog : public QDialog
 public:
     explicit Dialog(QWidget *parent = nullptr);
     ~Dialog();
+    QLineEdit lineEdit;
+    QLineEdit lineEdit_2;
+    QLineEdit lineEdit_3;
+    QLineEdit lineEdit_4;
+    QLineEdit lineEdit_5;
 
 private slots:
-    void on_lineEdit_editingFinished();
 
-    void on_lineEdit_2_editingFinished();
-
-    void on_lineEdit_3_editingFinished();
-
-    void on_lineEdit_4_editingFinished();
-
-    void on_lineEdit_5_editingFinished();
+    void on_buttonBox_accepted();
 
 private:
     Ui::Dialog *ui;

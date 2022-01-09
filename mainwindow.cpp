@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "dialog.h"
+#include "sqlite_functions.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -8,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 }
 MainWindow::~MainWindow()
-{
+{    
     delete ui;
 }
 
@@ -38,6 +39,17 @@ void MainWindow::on_pushButton_3_clicked()
 
 void MainWindow::on_pushButton_8_clicked()
 {
-
+        SQLBook book;
+    QSqlTableModel *modal= new QSqlTableModel;
+    modal->setTable("book");
+    modal->select();
+ui->tableView->setModel(modal);
+modal->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+modal->setHeaderData(1, Qt::Horizontal, QObject::tr("Nazwa Książki"));
+modal->setHeaderData(2, Qt::Horizontal, QObject::tr("ISBN"));
+modal->setHeaderData(3, Qt::Horizontal, QObject::tr("Autor"));
+modal->setHeaderData(4, Qt::Horizontal, QObject::tr("Rok wydania"));
+modal->setHeaderData(5, Qt::Horizontal, QObject::tr("Ilość"));
+    book.close();
 }
 

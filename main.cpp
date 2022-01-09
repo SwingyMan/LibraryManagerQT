@@ -4,7 +4,6 @@
 #include <QLocale>
 #include <QTranslator>
 #include <QPushButton>
-#define add PushButton_5
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
