@@ -65,5 +65,17 @@ void close()
     db.close();
     qDebug()<<"Connection closed";
 }
+void increment()
+{
+
+}
+void decrement()
+{
+
+}
+void get_data()
+{
+
+}
 };
 #endif // SQLITE_FUNCTIONS_H

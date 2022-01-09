@@ -15,6 +15,9 @@ public:
     explicit remover(QWidget *parent = nullptr);
     ~remover();
 
+private slots:
+    void on_buttonBox_accepted();
+
 private:
     Ui::remover *ui;
 };
