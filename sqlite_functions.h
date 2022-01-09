@@ -47,9 +47,18 @@ void put_records(QString name,QString isbn,QString author,QString yop,QString qu
                           << query.lastError();
             }
 }
-void export_records()
+void drop_row(int row)
 {
-QSqlQuery query("SELECT * FROM book");
+QSqlQuery query;
+query.prepare("DELETE FROM book WHERE id= :id");
+query.bindValue(":id",row);
+if(query.exec())
+{
+    qDebug() <<"success";
+}
+else{
+    qDebug() <<"fail";
+}
 }
 void close()
 {

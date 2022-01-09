@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include "dialog.h"
 #include "sqlite_functions.h"
+#include "remover.h"
+#include "edit.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -18,6 +20,7 @@ void MainWindow::on_pushButton_5_clicked()
 {
     Dialog dialog;
     dialog.setModal(true);
+    dialog.setWindowTitle("Dodawanie");
     dialog.exec();
 }
 
@@ -39,7 +42,6 @@ void MainWindow::on_pushButton_3_clicked()
 
 void MainWindow::on_pushButton_8_clicked()
 {
-        SQLBook book;
     QSqlTableModel *modal= new QSqlTableModel;
     modal->setTable("book");
     modal->select();
@@ -50,6 +52,25 @@ modal->setHeaderData(2, Qt::Horizontal, QObject::tr("ISBN"));
 modal->setHeaderData(3, Qt::Horizontal, QObject::tr("Autor"));
 modal->setHeaderData(4, Qt::Horizontal, QObject::tr("Rok wydania"));
 modal->setHeaderData(5, Qt::Horizontal, QObject::tr("Ilość"));
-    book.close();
+}
+
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    SQLBook book;
+    remover remover;
+    remover.setModal(true);
+    remover.setWindowTitle("Usuwanie");
+    remover.exec();
+}
+
+
+void MainWindow::on_pushButton_9_clicked()
+{
+    SQLBook book;
+    edit edit;
+    edit.setModal(true);
+    edit.setWindowTitle("Edycja");
+    edit.exec();
 }
 

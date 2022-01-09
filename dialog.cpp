@@ -21,7 +21,6 @@ void Dialog::on_buttonBox_accepted()
     QString quantity = ui->lineEdit_3->text();
     QString isbn = ui->lineEdit_4->text();
     QString year_of_production = ui->lineEdit_5->text();
-    book.initialize();
 book.put_records(name,isbn,author,year_of_production,quantity);
 }
 

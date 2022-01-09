@@ -11,17 +11,23 @@ CONFIG += c++11
 RC_ICONS = icon.ico
 SOURCES += \
     dialog.cpp \
+    edit.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    remover.cpp
 
 HEADERS += \
     dialog.h \
+    edit.h \
     mainwindow.h \
+    remover.h \
     sqlite_functions.h
 
 FORMS += \
     dialog.ui \
-    mainwindow.ui
+    edit.ui \
+    mainwindow.ui \
+    remover.ui
 
 TRANSLATIONS += \
     Library_pl_PL.ts

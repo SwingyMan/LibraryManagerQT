@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-
+#include "sqlite_functions.h"
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
@@ -18,6 +18,10 @@ QLocale::setDefault(QLocale(QLocale::Polish));
         }
     }
     MainWindow w;
+    SQLBook book;
+    book.initialize();
+    w.setWindowTitle("Librarian");
     w.show();
+    book.close();
     return a.exec();
 }
