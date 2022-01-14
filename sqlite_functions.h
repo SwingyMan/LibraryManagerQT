@@ -60,22 +60,28 @@ else{
     qDebug() <<"fail";
 }
 }
+void getData(int id,QString *title,QString *author,QString *isbn,QString *quantity,QString *yop)
+{
+QSqlQuery query("SELECT id, name, isbn, author, year_of_production, quantity FROM book");
+query.prepare("SELECT id, name, isbn, author, year_of_production, quantity FROM book WHERE id= :id");
+query.bindValue(":id",id);
+query.exec();
+query.first();
+qDebug() << query.size();
+* title = query.value(1).toString();
+* author = query.value(2).toString();
+* isbn = query.value(3).toString();
+* quantity = query.value(4).toString();
+* yop = query.value(5).toString();
+}
+void refresh_data()
+{
+
+}
 void close()
 {
     db.close();
     qDebug()<<"Connection closed";
-}
-void increment()
-{
-
-}
-void decrement()
-{
-
-}
-void get_data()
-{
-
 }
 };
 #endif // SQLITE_FUNCTIONS_H

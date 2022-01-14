@@ -15,6 +15,9 @@ public:
     explicit edit(QWidget *parent = nullptr);
     ~edit();
 
+private slots:
+    void on_buttonBox_accepted();
+
 private:
     Ui::edit *ui;
 };

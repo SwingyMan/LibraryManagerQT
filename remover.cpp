@@ -16,7 +16,7 @@ remover::~remover()
 void remover::on_buttonBox_accepted()
 {
     SQLBook book;
-    int id = ui->lineEdit->text().toInt();
-    book.drop_row(id);
+   int row = ui->lineEdit->text().toInt();
+   book.drop_row(row);
 }
 

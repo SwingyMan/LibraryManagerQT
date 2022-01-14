@@ -67,7 +67,6 @@ void MainWindow::on_pushButton_4_clicked()
 
 void MainWindow::on_pushButton_9_clicked()
 {
-    SQLBook book;
     edit edit;
     edit.setModal(true);
     edit.setWindowTitle("Edycja");

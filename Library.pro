@@ -12,6 +12,7 @@ RC_ICONS = icon.ico
 SOURCES += \
     dialog.cpp \
     edit.cpp \
+    edit2.cpp \
     main.cpp \
     mainwindow.cpp \
     remover.cpp
@@ -19,6 +20,7 @@ SOURCES += \
 HEADERS += \
     dialog.h \
     edit.h \
+    edit2.h \
     mainwindow.h \
     remover.h \
     sqlite_functions.h
@@ -26,6 +28,7 @@ HEADERS += \
 FORMS += \
     dialog.ui \
     edit.ui \
+    edit2.ui \
     mainwindow.ui \
     remover.ui
 
