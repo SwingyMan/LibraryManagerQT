@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1058</width>
+    <width>736</width>
     <height>567</height>
    </rect>
   </property>
@@ -39,32 +39,6 @@
      <bool>false</bool>
     </attribute>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>75</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Nowy plik</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>70</y>
-      <width>75</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Zapisz</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
@@ -89,19 +63,6 @@
     </property>
     <property name="text">
      <string>Dodaj</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>75</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Załaduj</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_8">
@@ -130,40 +91,30 @@
      <string>Edytuj</string>
     </property>
    </widget>
-   <widget class="QGraphicsView" name="graphicsView">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>50</y>
-      <width>281</width>
-      <height>441</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_6">
-    <property name="geometry">
-     <rect>
-      <x>770</x>
-      <y>20</y>
+      <x>10</x>
+      <y>10</y>
       <width>75</width>
       <height>24</height>
      </rect>
     </property>
     <property name="text">
-     <string>Dodaj obraz</string>
+     <string>Zmień hasło</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_7">
+   <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>20</y>
+      <x>10</x>
+      <y>40</y>
       <width>75</width>
       <height>24</height>
      </rect>
     </property>
     <property name="text">
-     <string>Usuń obraz</string>
+     <string>Zablokuj</string>
     </property>
    </widget>
   </widget>
@@ -172,7 +123,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1058</width>
+     <width>736</width>
      <height>22</height>
     </rect>
    </property>

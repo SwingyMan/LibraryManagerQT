@@ -15,6 +15,9 @@ public:
     explicit edit2(QWidget *parent = nullptr);
     ~edit2();
 
+private slots:
+    void on_buttonBox_accepted();
+
 private:
     Ui::edit2 *ui;
 };

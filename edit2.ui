@@ -38,6 +38,9 @@
      <height>24</height>
     </rect>
    </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_2">
    <property name="geometry">
@@ -68,6 +71,9 @@
      <height>24</height>
     </rect>
    </property>
+   <property name="inputMask">
+    <string>000-00-000-0000-0</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_5">
    <property name="geometry">
@@ -78,6 +84,9 @@
      <height>24</height>
     </rect>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_6">
    <property name="geometry">
@@ -87,6 +96,9 @@
      <width>113</width>
      <height>24</height>
     </rect>
+   </property>
+   <property name="inputMask">
+    <string>0000-00-00</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">

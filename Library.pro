@@ -13,6 +13,8 @@ SOURCES += \
     dialog.cpp \
     edit.cpp \
     edit2.cpp \
+    login.cpp \
+    login2.cpp \
     main.cpp \
     mainwindow.cpp \
     remover.cpp
@@ -21,6 +23,8 @@ HEADERS += \
     dialog.h \
     edit.h \
     edit2.h \
+    login.h \
+    login2.h \
     mainwindow.h \
     remover.h \
     sqlite_functions.h
@@ -29,6 +33,8 @@ FORMS += \
     dialog.ui \
     edit.ui \
     edit2.ui \
+    login.ui \
+    login2.ui \
     mainwindow.ui \
     remover.ui
 

@@ -16,6 +16,8 @@ Dialog::~Dialog()
 void Dialog::on_buttonBox_accepted()
 {
     SQLBook book;
+    ui->lineEdit_3->setValidator(new QIntValidator(0, 1000, this));
+    ui->lineEdit_4->setValidator(new QIntValidator(0, 100000000000000, this));
     QString name = ui->lineEdit->text();
     QString author = ui->lineEdit_2->text();
     QString quantity = ui->lineEdit_3->text();

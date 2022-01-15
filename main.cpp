@@ -18,9 +18,7 @@ QLocale::setDefault(QLocale(QLocale::Polish));
         }
     }
     MainWindow w;
-    SQLBook book;
-
-    book.initialize();
+SQLBook book;
     w.setWindowTitle("Librarian");
     w.show();
     return a.exec();
