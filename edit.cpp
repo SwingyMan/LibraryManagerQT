@@ -31,12 +31,17 @@ void edit::on_buttonBox_accepted()
 
      id = ui->lineEdit->text().toInt();
 
-    book.getData(id,name_poi,author_poi,isbn_poi,quantity_poi,yop_poi);
- edit2 edit2;
-
+    if(book.getData(id,name_poi,author_poi,isbn_poi,quantity_poi,yop_poi))
+ {edit2 edit2;
     edit2.setModal(true);
     this->hide();
     edit2.setWindowTitle("Edycja");
-    edit2.exec();
+    edit2.exec();}
+    else
+{
+        QMessageBox msgBox;
+        msgBox.setText("Błędny rekord");
+        msgBox.exec();
+    }
 }
 

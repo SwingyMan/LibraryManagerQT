@@ -8,6 +8,7 @@
 #include <QtSql>
 #include <QDebug>
 #include <QMessageBox>
+#include <QString>
 #include "dialog.h"
 class SQLBook
 {
@@ -35,7 +36,7 @@ void initialize()
       {
           query.clear();
           query.exec("INSERT INTO account(login, password)"
-                 "VALUES ('admin','admin')");
+                 "VALUES ('admin','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918')");
 }
 else
 {}
@@ -73,19 +74,23 @@ else{
     qDebug() <<"fail";
 }
 }
-void getData(int id,QString *title,QString *author,QString *isbn,QString *quantity,QString *yop)
+bool getData(int id,QString *title,QString *author,QString *isbn,QString *quantity,QString *yop)
 {
 QSqlQuery query;
 query.prepare("SELECT id, name, isbn, author, year_of_production, quantity FROM book WHERE id= :id");
 query.bindValue(":id",id);
 query.exec();
-query.first();
-qDebug() << query.size();
-* title = query.value(1).toString();
+if(query.first())
+{* title = query.value(1).toString();
 * author = query.value(2).toString();
 * isbn = query.value(3).toString();
 * quantity = query.value(4).toString();
 * yop = query.value(5).toString();
+return true;}
+else
+{
+    return false;
+}
 }
 void update_data(int id,QString title,QString author,QString isbn,QString quantity,QString yop)
 {
@@ -107,16 +112,6 @@ void update_data(int id,QString title,QString author,QString isbn,QString quanti
            qDebug() << "addPerson error:"
                     << query.lastError();
       }
-    if(query.isValid())
-    {
-        QMessageBox msgBox;
-        msgBox.setText("Błędny rekord");
-        msgBox.exec();
-    }
-    else
-    {
-
-    }
 }
 void close()
 {
@@ -126,9 +121,10 @@ void close()
 bool isLoggedIn(QString login,QString password)
 {
     QSqlQuery query;
-    QByteArray pass = password.toUtf8();
-    QCryptographicHash::hash(pass,QCryptographicHash::Sha512);
-    query.prepare("SELECT login,password FROM account WHERE login= :login AND password= :password");
+    QByteArray pass(password.toStdString().c_str());
+    pass = QCryptographicHash::hash(pass,QCryptographicHash::Sha256).toHex();
+    password = pass;
+    query.prepare("SELECT id,login,password FROM account WHERE id=1 AND login= :login AND password= :password");
     query.bindValue(":login",login);
     query.bindValue(":password",password);
     query.exec();
@@ -147,8 +143,9 @@ bool isLoggedIn(QString login,QString password)
 void changeLogin(QString login,QString password)
 {
     QSqlQuery query;
-    QByteArray pass = password.toUtf8();
-    QCryptographicHash::hash(pass,QCryptographicHash::Sha512);
+    QByteArray pass(password.toStdString().c_str());
+    pass = QCryptographicHash::hash(pass,QCryptographicHash::Sha256).toHex();
+    password = pass;
     query.prepare("UPDATE account SET login= :login, password = :password WHERE id=1");
     query.bindValue(":login",login);
     query.bindValue(":password",password);
