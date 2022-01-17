@@ -7,6 +7,8 @@
 #include "login.h"
 #include <QCryptographicHash>
 #include "login2.h"
+#include <QtNetwork/QNetworkAccessManager>
+#include <QUrl>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
