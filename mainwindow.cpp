@@ -7,8 +7,6 @@
 #include "login.h"
 #include <QCryptographicHash>
 #include "login2.h"
-#include <QtNetwork/QNetworkAccessManager>
-#include <QUrl>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -16,9 +14,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     login login;
     SQLBook book;
-    extern QString login1;
+    extern QString login1; // importowanie danych z formatki logowania
     extern QString password;
-    while(true)
+    while(true) // zmuszenie do logowania aż do podania prawidłowych danych
     {
     login.setModal(true);
     login.setWindowTitle("Logowanie");
@@ -30,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     else
     {}
 }
-    QSqlTableModel *modal= new QSqlTableModel;
+    QSqlTableModel *modal= new QSqlTableModel; // konfiguracja tabeli z danymi
     modal->setTable("book");
     modal->select();
 ui->tableView->setModel(modal);
@@ -47,9 +45,9 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_pushButton_5_clicked()
+void MainWindow::on_pushButton_5_clicked() // przycisk dodawania
 {
-    Dialog dialog;
+    Dialog dialog; // inicjalizacja okna dodawania
     dialog.setModal(true);
     dialog.setWindowTitle("Dodawanie");
     dialog.exec();
@@ -66,7 +64,7 @@ modal->setHeaderData(5, Qt::Horizontal, QObject::tr("Ilość"));
 }
 
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_pushButton_clicked() // przycisk zmiany danych logowania
 {
 login2 login2;
 login2.setModal(true);
@@ -75,7 +73,7 @@ login2.exec();
 }
 
 
-void MainWindow::on_pushButton_8_clicked()
+void MainWindow::on_pushButton_8_clicked() // przycisk odśwież
 {
         QSqlTableModel *modal= new QSqlTableModel;
     modal->setTable("book");
@@ -90,7 +88,7 @@ modal->setHeaderData(5, Qt::Horizontal, QObject::tr("Ilość"));
 }
 
 
-void MainWindow::on_pushButton_4_clicked()
+void MainWindow::on_pushButton_4_clicked() // przycisk usuwania
 {
     SQLBook book;
     remover remover;
@@ -110,7 +108,7 @@ modal->setHeaderData(5, Qt::Horizontal, QObject::tr("Ilość"));
 }
 
 
-void MainWindow::on_pushButton_9_clicked()
+void MainWindow::on_pushButton_9_clicked() //przycisk Edycji
 {
     edit edit;
     edit.setModal(true);
@@ -129,7 +127,7 @@ modal->setHeaderData(5, Qt::Horizontal, QObject::tr("Ilość"));
 }
 
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_pushButton_2_clicked() // przycisk blokady
 {
     login login;
     SQLBook book;

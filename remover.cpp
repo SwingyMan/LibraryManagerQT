@@ -13,7 +13,7 @@ remover::~remover()
     delete ui;
 }
 
-void remover::on_buttonBox_accepted()
+void remover::on_buttonBox_accepted() //usuwanie rekordu
 {
     SQLBook book;
    int row = ui->lineEdit->text().toInt();

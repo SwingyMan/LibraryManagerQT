@@ -14,11 +14,7 @@ class Dialog : public QDialog
 public:
     explicit Dialog(QWidget *parent = nullptr);
     ~Dialog();
-    QLineEdit lineEdit;
-    QLineEdit lineEdit_2;
-    QLineEdit lineEdit_3;
-    QLineEdit lineEdit_4;
-    QLineEdit lineEdit_5;
+
 
 private slots:
 

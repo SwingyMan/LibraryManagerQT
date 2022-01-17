@@ -13,7 +13,7 @@ login2::~login2()
     delete ui;
 }
 
-void login2::on_buttonBox_accepted()
+void login2::on_buttonBox_accepted() //zamiana danych logowania
 {
     QString login1;
     QString password;

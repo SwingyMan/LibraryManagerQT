@@ -9,7 +9,7 @@ login::login(QWidget *parent) :
 {
     ui->setupUi(this);
     SQLBook book;
-    book.initialize();
+    book.initialize(); //otwarcie bazy danych
 }
 
 login::~login()
@@ -19,13 +19,13 @@ login::~login()
 
 void login::on_buttonBox_accepted()
 {
-    login1 = ui->lineEdit->text();
+    login1 = ui->lineEdit->text(); //zapisanie danych logowania w zmiennej
     password = ui->lineEdit_2->text();
 }
 
 
 void login::on_buttonBox_rejected()
 {
-    exit(EXIT_FAILURE);
+    exit(EXIT_FAILURE); //dodanie możliwości wyjścia z programu
 }
 

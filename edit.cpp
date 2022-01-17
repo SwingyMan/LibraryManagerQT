@@ -2,7 +2,7 @@
 #include "ui_edit.h"
 #include "sqlite_functions.h"
 #include "edit2.h"
-QString name;
+QString name; //przygotowanie zmiennych z rekordu
 QString author;
 QString isbn;
 QString quantity;
@@ -29,9 +29,9 @@ void edit::on_buttonBox_accepted()
 {
     SQLBook book;
 
-     id = ui->lineEdit->text().toInt();
+     id = ui->lineEdit->text().toInt(); // zdobycie id rekordu
 
-    if(book.getData(id,name_poi,author_poi,isbn_poi,quantity_poi,yop_poi))
+    if(book.getData(id,name_poi,author_poi,isbn_poi,quantity_poi,yop_poi)) //sprawdzenie czy rekord jest "pusty"
  {edit2 edit2;
     edit2.setModal(true);
     this->hide();
