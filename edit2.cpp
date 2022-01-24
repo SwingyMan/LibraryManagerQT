@@ -37,6 +37,6 @@ void edit2::on_buttonBox_accepted()
     isbn =ui->lineEdit_4->text();
     quantity = ui->lineEdit_5->text();
     yop =ui->lineEdit_6->text();
-    book.update_data(id,name,author,isbn,yop,quantity); // aktualizacja nowymi danymi
+    book.update_data(id,name,author,isbn,quantity,yop); // aktualizacja nowymi danymi
 }
 

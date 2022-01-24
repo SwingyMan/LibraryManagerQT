@@ -83,10 +83,10 @@ query.bindValue(":id",id);
 query.exec();
 if(query.first()) // kontrola prawidłowości rekordu
 {* title = query.value(1).toString();
-* author = query.value(2).toString();
-* isbn = query.value(3).toString();
-* quantity = query.value(4).toString();
-* yop = query.value(5).toString();
+* author = query.value(3).toString();
+* isbn = query.value(2).toString();
+* quantity = query.value(5).toString();
+* yop = query.value(4).toString();
 return true;}
 else
 {
