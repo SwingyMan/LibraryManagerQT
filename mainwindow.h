@@ -1,3 +1,11 @@
+/*
+Autor: Marcin Bogus, Tobiasz Syguda, Wiktoria Koman
+Nazwa pliku: mainwindow.h
+Funkcjonalność pliku: Plik deklarujący klasę odpowiedzialną za główne okno programu
+Używane w: main.cpp, mainwindow.cpp
+*/
+
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

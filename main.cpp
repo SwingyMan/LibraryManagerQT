@@ -1,3 +1,11 @@
+/*
+Autor: Marcin Bogus, Tobiasz Syguda, Wiktoria Koman
+Funkcjonalność pliku: Główny plik przy kompilacji programu
+Nazwa pliku: main.cpp
+*/
+
+
+
 #include "mainwindow.h"
 #include "sqlite_functions.h"
 #include <QApplication>

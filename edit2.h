@@ -1,3 +1,11 @@
+/*
+Autor: Marcin Bogus, Tobiasz Syguda, Wiktoria Koman
+Nazwa pliku: edit2.h
+Funkcjonalność pliku: Plik odpowiedzialny za drugie okno edycji
+Używane w: edit.cpp, edit2.cpp
+*/
+
+
 #ifndef EDIT2_H
 #define EDIT2_H
 

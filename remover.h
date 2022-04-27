@@ -1,3 +1,11 @@
+/*
+Autor: Marcin Bogus, Tobiasz Syguda, Wiktoria Koman
+Nazwa pliku: remover.h
+Funkcjonalność pliku: Deklaracja klasy, która obsługuje okienko po wciśnięciu usuń
+Używane w: mainwindow.cpp, remover.cpp
+*/
+
+
 #ifndef REMOVER_H
 #define REMOVER_H
 

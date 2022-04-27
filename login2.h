@@ -1,3 +1,10 @@
+/*
+Autor: Marcin Bogus, Tobiasz Syguda, Wiktoria Koman
+Nazwa pliku: login2.h
+Funkcjonalność pliku: Okno ze zmianą danych logowania
+Used in: login2.cpp, mainwindow.cpp
+*/
+
 #ifndef LOGIN2_H
 #define LOGIN2_H
 

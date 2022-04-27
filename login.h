@@ -1,3 +1,11 @@
+/*
+Autor: Marcin Bogus, Tobiasz Syguda, Wiktoria Koman
+Nazwa pliku: login.h
+Funkcjonalność pliku: Okienko logowania
+Used in: login.cpp, mainwindow.cpp
+*/
+
+
 #ifndef LOGIN_H
 #define LOGIN_H
 

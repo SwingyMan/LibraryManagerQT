@@ -1,3 +1,11 @@
+/*
+Autor: Marcin Bogus, Tobiasz Syguda, Wiktoria Koman
+Nazwa pliku: dialog.h
+Funkcjonalność pliku: Dodawanie nowych rekordów do tabeli
+Używane w: sqlite_functions.h, dialog.cpp, mainwindow.cpp
+*/
+
+
 #ifndef DIALOG_H
 #define DIALOG_H
 

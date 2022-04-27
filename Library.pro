@@ -1,3 +1,9 @@
+#Autor: Marcin Bogus, Tobiasz Syguda, Wiktoria Koman
+#Nazwa pliku: Library.pro
+#Funkcjonalność pliku:
+#Used in:
+
+
 QT       += core gui\
 sql\
 network
@@ -18,7 +24,8 @@ SOURCES += \
     login2.cpp \
     main.cpp \
     mainwindow.cpp \
-    remover.cpp
+    remover.cpp \
+    sqlite_functions.cpp
 
 HEADERS += \
     dialog.h \

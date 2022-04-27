@@ -1,3 +1,9 @@
+/*
+Autor: Marcin Bogus, Tobiasz Syguda, Wiktoria Koman
+Nazwa pliku: login.cpp
+*/
+
+
 #include "login.h"
 #include "ui_login.h"
 #include "sqlite_functions.h"
@@ -9,7 +15,7 @@ login::login(QWidget *parent) :
 {
     ui->setupUi(this);
     SQLBook book;
-    book.initialize(); //otwarcie bazy danych
+    book.initialize(); // Otwarcie bazy danych.
 }
 
 login::~login()
@@ -19,13 +25,13 @@ login::~login()
 
 void login::on_buttonBox_accepted()
 {
-    login1 = ui->lineEdit->text(); //zapisanie danych logowania w zmiennej
+    login1 = ui->lineEdit->text(); // Zapisanie danych logowania w zmiennej.
     password = ui->lineEdit_2->text();
 }
 
 
 void login::on_buttonBox_rejected()
 {
-    exit(EXIT_FAILURE); //dodanie możliwości wyjścia z programu
+    exit(EXIT_FAILURE); // Dodanie możliwości wyjścia z programu.
 }
 

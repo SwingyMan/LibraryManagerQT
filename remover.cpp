@@ -1,3 +1,9 @@
+/*
+Autor: Marcin Bogus, Tobiasz Syguda, Wiktoria Koman
+Nazwa pliku: remover.cpp
+*/
+
+
 #include "remover.h"
 #include "ui_remover.h"
 #include "sqlite_functions.h"
@@ -13,7 +19,7 @@ remover::~remover()
     delete ui;
 }
 
-void remover::on_buttonBox_accepted() //usuwanie rekordu
+void remover::on_buttonBox_accepted() // Usuwanie danego rekordu.
 {
     SQLBook book;
    int row = ui->lineEdit->text().toInt();

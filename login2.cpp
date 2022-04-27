@@ -1,3 +1,9 @@
+/*
+Autor: Marcin Bogus, Tobiasz Syguda, Wiktoria Koman
+Nazwa pliku: login2.cpp
+*/
+
+
 #include "login2.h"
 #include "ui_login2.h"
 #include "sqlite_functions.h"
@@ -13,7 +19,7 @@ login2::~login2()
     delete ui;
 }
 
-void login2::on_buttonBox_accepted() //zamiana danych logowania
+void login2::on_buttonBox_accepted() // Zmiana danych logowania.
 {
     QString login1;
     QString password;
